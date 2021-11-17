@@ -1,0 +1,85 @@
+//COLOR TEXT
+$primaryTx: #fb4226;
+$secondaryTx: #00ac4d;
+$blackTx: #000000;
+$whiteTx: #ffffff;
+$gray-500Tx: #949494;
+$gray-400Tx: #a5a5a5;
+$gray-300Tx: #ebebec;
+$greenTx: #8bc541;
+$yellowTx: #d08c18;
+
+//COLOR BACKGROUND
+$primaryBg: #fb4226;
+$secondaryBg: #00ac4d;
+$whiteBg: #ffffff;
+$gray-600Bg: #4a4a4a;
+$gray-500Bg: #949494;
+$gray-400Bg: #a5a5a5;
+$gray-300Bg: #ebebec;
+$gray-200Bg: #fafafa;
+$black-100Bg: #222222;
+
+//COLOR BORDER
+$whiteBd: #ffffff;
+$gray-600Bd: #4a4a4a;
+$gray-500Bd: #949494;
+$gray-400Bd: #a5a5a5;
+$gray-300Bd: #ebebec;
+
+
+//FONT-SIZE
+$text-xs: 0.5rem;
+$text-2xs: 0.7rem;
+$text-sm: 0.8rem;
+$text-2sm: 0.9rem;
+$text-md: 1rem;
+$text-2md: 1.2rem;
+$text-lg: 1.3rem;
+$text-2lg: 1.5rem;
+$text-xl: 2rem;
+$text-2xl: 2.5rem;
+
+//FONT-WEIGHT
+$text-normal: 300;
+$text-light: 400;
+$text-regular: 500;
+$text-bold:600;
+$text-bolder: 700;
+
+//SPACING
+$spacing: 1rem;
+
+
+// BORDER-RADIUS
+$rounded-xs: 0.2rem;
+$rounded-2xs: 0.3rem;
+$rounded-sm: 0.4rem;
+$rounded-md: 0.5rem;
+$rounded-lg: 0.7rem;
+$rounded-xl: 1rem;
+
+//MIXIN
+@mixin Flex($d, $jc, $ai){
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+};
+@mixin Text($fs, $fw, $c){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+};
+@mixin Button($bd, $br, $ol, $bg, $c){
+    border: $bd;
+    border-radius: $br;
+    outline: $ol;
+    background: $bg;
+    color: $c;
+};
+@mixin BgImg($bgimg, $bgp, $bgr, $bgz){
+    background: $bgimg;
+    background-position: $bgp;
+    background-repeat: $bgr;
+    background-size: $bgz;
+};

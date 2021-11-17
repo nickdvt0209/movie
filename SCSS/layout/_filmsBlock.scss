@@ -1,0 +1,171 @@
+.filmsBlock{
+    a{
+        text-decoration: none;
+        color: $blackTx;
+    }
+    .container{
+        .filmsNav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                @include Text($text-lg, $text-regular, $blackTx);
+                text-decoration: none;
+                margin: 0 $spacing;
+                transition: all 0.15s linear;
+            }
+            .active{
+                @include Text($text-2lg, $text-regular, $primaryTx);
+            }
+            .sapChieu:hover{
+                font-size: $text-2lg;
+            }
+        }
+
+        .films-list{
+            .list-item{
+                margin: 0 -$spacing*2;
+                .item{
+                    margin-bottom: $spacing*2;
+                    .item-films{
+                        .thumbnail-films{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            .thumbnail-films-info{
+                                position: relative;
+                                height: 25*$spacing;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: $rounded-sm;
+                                }
+                                .film-type-label{
+                                    position: absolute;
+                                    top: -$spacing*2;
+                                    left: -$spacing;
+                                    img{
+                                        width: 10*$spacing;
+                                    }
+                                }
+                                .item-point{
+                                    position: absolute;
+                                    top: $spacing;
+                                    right: $spacing;
+                                    text-align: center;
+                                    width: 4*$spacing;
+                                    height: 2.5*$spacing;
+                                    background: rgba(55, 58, 49, 0.85);
+                                    border-radius: $rounded-xs;
+                                    p{
+                                        @include Text($text-2md, $text-regular, $whiteTx);
+                                        margin-bottom: -$spacing*0.7;
+                                    }
+                                    i{
+                                        color: $primaryTx;
+                                        font-size: $text-xs;
+                                    }
+                                }
+                                .sneakshow{
+                                    width: 9*$spacing;
+                                    height: 2*$spacing;
+                                    background: $primaryBg;
+                                    border-radius: $rounded-lg;
+                                    padding-top: $spacing*0.2;
+                                    position: absolute;
+                                    bottom: $spacing;
+                                    right: $spacing;
+                                    p{
+                                        color:$whiteTx;
+                                        text-align: center;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+
+                            .thumbnail-films--detail{
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(to top, #000000, transparent);
+                                border-radius: $rounded-sm;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                visibility: hidden;
+                                .play{
+                                    width: 30%;
+                                    height: 30%;
+                                    position: absolute;
+                                    bottom: 50%;
+                                    right: 50%;
+                                    img{
+                                        width: 100%;
+                                        position: relative;
+                                        top: 50%;
+                                        left: 50%;
+                                    }
+                                }
+                            }
+                        }
+                        .content-item{
+                            padding: $spacing 0;
+                            position: relative;
+                            height: 7*$spacing;
+                            .content-item-info{
+                                .tag{
+                                    display: inline-block;
+                                    width: 2.5*$spacing;
+                                    height: 1.5*$spacing;
+                                    background:  $primaryBg;
+                                    border-radius: $rounded-2xs;
+                                    text-align: center;
+                                    p{
+                                        @include Text($text-md, $text-regular, $whiteTx);
+                                    }
+                                }
+                                .tag-P{
+                                    background: $secondaryBg;
+                                }
+                                span{
+                                    @include Text($text-2md, $text-regular, $blackTx);
+                                    margin-bottom: $spacing;
+                                }
+                                h6{
+                                    @include Text($text-2sm, $text-light, $gray-400Tx);
+                                    margin-top: $spacing*0.5;
+                                    margin-bottom: $spacing*3;
+                                }
+                            }
+                            
+                            .content-item-detail{
+                                height: 100%;
+                                width: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                visibility: hidden;
+                                button{
+                                    @include Text($text-2md, $text-regular, $whiteTx);
+                                    @include Button(none, $rounded-md,none, $primaryBg, $whiteTx);
+                                    width: 100%;
+                                    padding: $spacing;
+                                    letter-spacing: 0.1*$spacing;
+                                    word-spacing: 0.2*$spacing;
+                                    margin-top: $spacing;
+                                }
+                            }
+                        }
+                    }
+                    .item-films:hover{
+                        .thumbnail-films--detail, .content-item-detail {
+                            visibility: visible;
+                        }
+                        .content-item-info{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

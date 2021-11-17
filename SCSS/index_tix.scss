@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  html {
+    font-size: 16px;
+  }
+
+@import './helpers/variable';
+@import './layout/_header.scss';
+@import './layout/carousel';
+@import './layout/hometool';
+@import './layout/filmsBlock';
+@import './layout/homeCinema';
+@import './layout/newsblock';
+@import './layout/appCinema';
+@import './layout/footer';

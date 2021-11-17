@@ -1,0 +1,134 @@
+.homeCinema{
+    .container{
+        border: 1px solid $gray-300Bd;
+        .homeCinemalist{
+            .cinema-item{
+                border-right: 1px solid $gray-300Bd;
+                .cinemalogo{
+                    .logo{
+                        padding: $spacing 0;
+                        border-bottom: 1px solid $gray-300Bd;
+                        .nav-link{
+                            padding: 0;
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .cinema-item-inner{
+                    .tab-content{
+                        .item{
+                            margin-top: $spacing;
+                            .content{
+                                border-bottom: 1px solid $gray-300Bd;
+                                padding-bottom: $spacing;    
+                                    img{
+                                        width: 4*$spacing;
+                                        height: 4*$spacing;
+                                    }
+                                    .address{
+                                        margin-left: $spacing;
+                                        p{
+                                            margin: 0;
+                                            font-weight: $text-regular;
+                                            b{
+                                                color: $greenTx;
+                                            }
+                                        }
+                                        h6{
+                                            @include Text($text-sm, $text-regular, $gray-400Tx);
+                                        }
+                                        span{
+                                            color: $primaryTx;
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                }
+
+                .cinemafilms__list{
+                    height: 45*$spacing;
+                    overflow:auto;
+                    margin-top: $spacing;
+                    padding-right: $spacing*2;
+                    .cinemafilms__item{
+                        border-bottom: 1px solid $gray-300Bd;
+                        padding-bottom: $spacing*2;
+                        margin-bottom: $spacing*2;
+                        .content__films{
+                            a{
+                                text-decoration: none;
+                                color: $blackTx;
+                            }
+                            .films-item{
+                                @include Flex(flex, none, center);
+                                margin-bottom: $spacing;
+                            
+                                .image{
+                                    width: 4*$spacing;
+                                    height: 4*$spacing;
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                                .content-info{
+                                    margin: 0 $spacing;
+                                    .tagfilms{
+                                        @include Button(none, $rounded-2xs, none, $primaryBg, $whiteTx);
+                                        display: inline-block;
+                                        width: 2.5*$spacing;
+                                        height: 1.5*$spacing;
+                                        text-align: center;
+                                        font-weight: $text-regular;
+                                    }
+                                    .tagfilms-P{
+                                        background: $secondaryBg;
+                                    }
+                                    span{
+                                        @include Text($text-2md, $text-regular, $blackTx);
+                                        margin-bottom: $spacing;
+                                    }
+                                    h6{
+                                        @include Text($text-2sm, $text-regular, $gray-400Tx);
+                                        margin-top: $spacing*0.5;
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+
+                            .digital{
+                                font-weight: $text-regular;
+                                margin-bottom: 0;
+                            }
+
+                            .listbtn-time{
+                                margin-top: $spacing*0.5;
+                                .itembtn-time{
+                                    a{
+                                        @include Button(none, $rounded-md, none, $gray-200Bg, $gray-500Tx);
+                                        display: inline-block;
+                                        padding: $spacing*0.2 $spacing*0.5;
+                                        text-decoration: none;
+
+                                        span{
+                                            @include Text($text-2md, $text-regular, $secondaryTx);
+                                            &:hover{
+                                            color: $primaryTx;
+                                            }
+                                        }
+                                    }
+                                }
+                            }   
+                        }
+                    }
+                }
+            }
+            .cinema-item-last{
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
+}

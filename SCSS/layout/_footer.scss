@@ -1,0 +1,70 @@
+.footer{
+    background: $black-100Bg;
+
+    a{
+        display: block;
+        text-decoration: none;
+        @include Text($text-2sm, $text-regular, $gray-500Tx);
+        &:hover{
+            color:$whiteTx;
+        }
+    }
+    .container{
+        .footer-top{
+            color:$whiteTx;
+            padding-top: $spacing*2;
+
+            .footer-top-partner{
+                p{
+                    padding:0 $spacing;
+                }
+                a{
+                    background:$whiteBg;
+                    width: 2.5*$spacing;
+                    height: 2.5*$spacing;
+                    border-radius: $rounded-xl*50;
+                    margin: 0 $spacing*0.7 $spacing*1.4 $spacing*0.7; 
+                    img{
+                        border-radius: $rounded-xl*50;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .footer-top-appsocial{
+                text-align: center;
+                a{
+                    display: inline;
+                    margin: 0 $spacing;
+                    img{
+                        height: 2.5*$spacing;
+                    }
+                }
+            }
+        }
+
+        hr{
+            border-top: 1px solid $gray-600Bd;
+        }
+
+        .footer-bottom{
+            color:$whiteTx;
+            img{
+                width: 80%;
+                border-radius: $rounded-md;
+            };
+            h2{
+                font-size: $text-md;
+            }
+            p{
+                @include Text($text-2sm, none, $gray-500Tx);
+                margin: 0;
+                padding-right: $spacing*3;
+            }
+            a{
+                display: inline;
+                color: $primaryTx;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.carousel{
+    position: relative;
+    
+    .carousel-control-prev-icon{
+        width: $spacing*3.125;
+        height: $spacing*3.125;
+        background-image: url(../../img/back-session.png);
+
+    }
+    .carousel-control-next-icon{
+        width: $spacing*3.125;
+        height: $spacing*3.125;
+        background-image: url(../../img/next-session.png);
+    }
+    .modal-video{
+        .playvideo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            img{
+                position: relative;
+                top: 50%;
+                left: -50%;
+            }
+        }
+        .modal-dialog{
+            width: 0;
+        }
+        .texts{
+            display: flex;
+            .cl{
+                width: $spacing*2;
+                height: $spacing*2;
+                border: 2px solid  $whiteBd;
+                border-radius: $rounded-xl*50;
+                text-align: center
+                ;
+                button{
+                    span{
+                        color:$whiteTx;
+                    }
+                }
+            }
+        }
+    }
+}

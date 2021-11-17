@@ -1,0 +1,79 @@
+.appCinema{
+    .appCinema__background{
+        height: 40*$spacing;
+        @include BgImg(url(../../img/backapp.jpg), center, no-repeat, cover);
+        color:$whiteTx;
+
+        .container{
+            @include Flex(flx, none,center);
+            position: relative;
+            height: 40*$spacing;
+        }
+        .appCinema__content{
+            @include Flex(flex, none,center);
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            .appCinema__download{
+                width: 50%;
+                position: relative;
+                bottom: 50%;
+                padding:0 $spacing*2;
+                h1{
+                    line-height: 4*$spacing;
+                }
+                p{
+                    word-spacing: 0.1*$spacing;
+                    letter-spacing: 1px;
+                    font-weight: $text-regular;
+                    margin: $spacing*2 0;
+                }
+                button{
+                    @include Button(none, $rounded-2xs, none, $primaryBg, $whiteTx);
+                    @include Text($text-2md, $text-regular, $whiteTx);
+                    padding: $spacing*0.5 $spacing;
+                }
+                span{
+                    @include Text($text-2sm, $text-regular, $whiteTx);
+                    display: block;
+                    margin-top: $spacing;
+                    word-spacing: 0.2*$spacing;
+                    a{
+                        text-decoration: none;
+                        color:$whiteTx;
+                        border-bottom: 1px solid$whiteBd;
+                    }
+                }
+            }
+            .appCinema__mobile{
+                @include Flex(flex, none,center);
+                flex-direction: column;
+                width: 50%;
+                position: relative;
+                bottom: 50%;
+                position: relative;
+                
+                .appCinema__mobile-img{
+                    width: calc(100% / 3);
+                    img{
+                        width: 100%;
+                       
+                    }
+                }
+                
+                .appCinema__mobile--slide{
+                    padding: $spacing*0.5 $spacing*0.4 $spacing*0.4 $spacing*0.4;
+                    width: calc(100% / 3);
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    img{
+                        border-radius: $rounded-xl;
+                    }
+                }
+            }
+        }
+    }
+}

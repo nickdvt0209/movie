@@ -1,0 +1,339 @@
+@import './helpers/variable';
+
+.containerfluid{
+    display: flex;
+    height: 100%;
+    .pagefilm-left{
+        width: 75%;
+        @include BgImg(url(../img/gia-dinh-croods-ky-nguyen-moi-the-croods-new-age-p-16057775991222_215x318.png), center, no-repeat, cover);
+        position: relative;
+
+        .pagefilm-header{
+            width: 100%;
+            height: $spacing*5;
+            padding: $spacing*1.5;
+            padding-left: $spacing*3;
+            background: $whiteBg;
+            box-shadow: 0 5px 15px 0 rgba(14, 14, 14, 0.3);
+            position: fixed;
+
+            .header-top{
+                width: 75%;
+                @include Flex(flex, none, center);
+                p{
+                    margin: 0;
+                    font-weight: $text-regular;
+                }
+                span{
+                    @include Text($text-2lg, $text-regular, none);
+                }
+                .header-left{
+                    .header-step{
+                        @include Flex(flex, space-around, none);
+                        font-size: $text-2sm;
+                        .active{
+                            @include Text(none, $text-regular, $primaryTx);
+                        }
+                    }
+                }
+                .header-right{
+                    a{
+                        text-decoration: none;
+                        color: $gray-500Tx;
+                        @include Flex(flex, flex-end, center);
+                        i{
+                            @include Text($text-2lg, none, $gray-400Tx);
+                            margin-right: $spacing;
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        .theater-movie{
+            @include Flex(flex, none, center);
+            flex-direction: column;
+            background:$whiteBg;
+            margin-left: $spacing*4;
+            padding: $spacing*8 $spacing $spacing $spacing;
+
+            p{ 
+                padding: 0;
+                margin: 0;
+            }
+
+            .top-content{
+                @include Flex(flex, start, center);
+                width: 100%;
+
+                .theater{
+                    @include Flex(flex, none, center);
+                    width: 50%;
+                    img{
+                        width: $spacing*3;
+                        margin-right: $spacing;
+                    }.text{
+                        b{
+                            color: $secondaryTx;
+                        }
+                        span{
+                            color:$gray-400Tx;
+                        }
+                    }
+    
+                }
+                .time-hold{
+                    width: 50%;
+                    text-align: right;
+                    p{
+                        @include Text($text-sm, none, $gray-400Tx);
+                    }
+                    span{
+                        @include Text($text-xl, $text-regular, $primaryTx);
+                    }
+                }
+            }
+
+            .screen{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .listseat{
+                width: 100%;
+                overflow: auto;
+                // margin: 0;
+                // padding: 0;
+                .listseat__inner{
+                    // width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    .listseat__inner--row{
+                        // width: 100%;
+                        .rowseat{
+                            @include Flex(flex, none, center);
+                            margin: $spacing*0.5 0;
+                            .name-seat{
+                                width: $spacing*3;
+                            }
+                            .seat{
+                                margin: $spacing*0.5;
+                            }
+                            .seat-double{
+                                margin: 0 $spacing*0.7;
+                            }
+                        }
+                    }
+                }
+            }
+            .listnote{
+                @include Flex(flex, none, center);
+                display: flex;
+                text-align: center;
+                .note-item{
+                    @include Text($text-2xs, none, $gray-400Tx);
+                    margin: $spacing*2 $spacing;
+                }
+            }
+        }
+    }
+
+    .pagefilm-right{
+        width: 25%;
+        height: 100%;
+        background:$whiteBg;
+        box-shadow: 0 5px 15px 5px rgba(14, 14, 14, 0.3);
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        .pagefilm-form{
+            padding: 0 $spacing;
+            overflow: auto;
+            height: 70%;
+            .border-bt{
+                border-bottom: 1px dashed$gray-400Bd;
+                margin-top: $spacing;
+                padding-bottom: $spacing;
+            }
+            p{
+                margin: 0;
+            }
+            .price{
+                @include Text($text-2xl, $text-regular, $secondaryTx);
+                padding: $spacing;
+                text-align: center;
+            }
+            .film{
+                .title{
+                    @include Flex(flex, none, center);
+                    margin-bottom: $spacing*0.5;
+                    .tag{
+                        @include Text(none, $text-regular, $whiteTx);
+                        text-align: center;
+                        width: $spacing*2.5;
+                        height: $spacing*1.5;
+                        background: $primaryBg;
+                        border-radius: $rounded-2xs;
+                    }
+                    h2{
+                        font-size: $text-md;
+                        margin: 0;
+                        padding-left: $spacing*0.5;
+                    }
+                }
+                p{
+                    font-size: $text-2sm;
+                }
+            }
+    
+            .seat{
+                @include Flex(flex, space-between, center);
+                p{
+                    color: $primaryTx;
+                }
+                .seat-price{
+                    @include Text(none, $text-regular, $secondaryTx);
+                }
+            }
+    
+            .email, .numberphone, .code {
+                label{
+                    @include Text(none, $text-regular, $gray-400Tx);
+                }
+                input{
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                }
+            }
+    
+            .code{
+                @include Flex(flex, none, center);
+                label{
+                    @include Text($text-sm, $text-normal, none);
+                }
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                button{
+                    @include Button(none, $rounded-sm, none, $gray-400Bg, $whiteTx);
+                    font-size: $text-md;
+                    padding: $spacing*0.3;
+                    width: $spacing*10;
+                }
+            }
+    
+            .payment{
+                padding: $spacing 0;
+                .p2{
+                    @include Text($text-sm, none, $primaryTx);
+                }
+            }
+        }
+
+        .pagefilm-bottom{
+            height: 30%;
+            padding-top: $spacing;
+            .pagefilm-bottom-text{
+                height: 60%;
+                padding: $spacing*0.5;
+                p{
+                    background:$whiteBg;
+                    text-align: center;
+                    font-size: $text-sm;
+                    line-height: $spacing*1.5;
+                    span{
+                        color:$yellowTx;
+                    }
+                    i{
+                        @include Text($text-2md, none, $primaryTx);
+                        margin-right: $spacing*0.3;
+                    }
+                }
+            }
+            
+            button{
+                @include Button(none, none, none, $gray-400Bg, $whiteTx);
+                @include Text($text-2lg, $text-regular, $whiteTx);
+                width: 100%;
+                height: 40%;
+                padding: $spacing*1;
+                margin-top: $spacing;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 768px){
+    .containerfluid{
+        display: block;
+        .pagefilm-left{
+            width: 100%;
+            .pagefilm-header{
+                width: 100%;
+                padding: $spacing*1.5;
+                .header-top{
+                    width: 100%;
+                    margin: 0;
+                    .header-left{
+                        .header-step{
+                            display: block;
+                            font-size: $text-md;
+                            .step2{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .theater-movie{
+                margin: 0;
+                padding: $spacing*8 $spacing $spacing $spacing;
+                .listseat{
+                    .rowseat{
+                        .name-seat{
+                            width: $spacing*2;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pagefilm-right{
+            display: block;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .containerfluid{
+        .pagefilm-left{
+            .theater-movie{
+                margin: 0;
+                .listseat{
+                    width: 100%;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+}

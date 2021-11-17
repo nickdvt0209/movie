@@ -1,0 +1,61 @@
+.header{
+    @include Flex(flex, space-between, center);
+    padding: $spacing*0.5 $spacing*2;
+
+    a{
+        text-decoration: none;
+        color: $gray-500Tx;
+    }
+
+    .header__logo{
+        width: 40%;
+
+        img{
+            height: 3*$spacing;
+        }
+    }
+
+    .header__navbar{
+        @include Flex(flex, space-between, center);
+        width: 60%;
+
+        .navs>a{
+            @include Text($text-2sm, $text-regular, $blackTx);
+            margin: 0 $spacing*0.5;
+
+            &:hover{
+                color: $primaryTx;
+            }
+        }
+
+        .navbar__right{
+            @include Flex(flex, center, center);
+            color: $gray-500Tx;
+            
+            .login{
+                border-right: 1px solid  $gray-500Bd;
+                margin-right: $spacing;
+                padding: 0 $spacing;
+                
+                i{
+                    font-size: $text-2lg;
+                }
+            }
+
+            .place{
+                @include Flex(flex, center, center);
+                
+                .city{
+                    margin-bottom: 0;
+                    border: none;
+                    outline: none;
+                    .namecity{
+                        color: $gray-500Tx;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    
+}

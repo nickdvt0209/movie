@@ -1,0 +1,931 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+.header a {
+  text-decoration: none;
+  color: #949494;
+}
+
+.header .header__logo {
+  width: 40%;
+}
+
+.header .header__logo img {
+  height: 3rem;
+}
+
+.header .header__navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+
+.header .header__navbar .navs > a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0.5rem;
+}
+
+.header .header__navbar .navs > a:hover {
+  color: #fb4226;
+}
+
+.header .header__navbar .navbar__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #949494;
+}
+
+.header .header__navbar .navbar__right .login {
+  border-right: 1px solid #949494;
+  margin-right: 1rem;
+  padding: 0 1rem;
+}
+
+.header .header__navbar .navbar__right .login i {
+  font-size: 1.5rem;
+}
+
+.header .header__navbar .navbar__right .place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__navbar .navbar__right .place .city {
+  margin-bottom: 0;
+  border: none;
+  outline: none;
+}
+
+.header .header__navbar .navbar__right .place .city .namecity {
+  color: #949494;
+  border: none;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel .carousel-control-prev-icon {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-image: url(../../img/back-session.png);
+}
+
+.carousel .carousel-control-next-icon {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-image: url(../../img/next-session.png);
+}
+
+.carousel .modal-video .playvideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.carousel .modal-video .playvideo img {
+  position: relative;
+  top: 50%;
+  left: -50%;
+}
+
+.carousel .modal-video .modal-dialog {
+  width: 0;
+}
+
+.carousel .modal-video .texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel .modal-video .texts .cl {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #ffffff;
+  border-radius: 50rem;
+  text-align: center;
+}
+
+.carousel .modal-video .texts .cl button span {
+  color: #ffffff;
+}
+
+.hometool .container {
+  position: absolute;
+  top: 37rem;
+  left: 7.5%;
+}
+
+.hometool .container .nav-list {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 5px 5px rgba(14, 14, 14, 0.3);
+          box-shadow: 0 0 5px 5px rgba(14, 14, 14, 0.3);
+}
+
+.hometool .container .nav-list .dropdown-toggle::after {
+  margin-left: 7.65rem;
+}
+
+.hometool .container .nav-list .nav-item a {
+  color: #000000;
+  text-decoration: none;
+  border-right: 1px solid #ebebec;
+}
+
+.hometool .container .nav-list .nav-item .nav-last {
+  color: #ffffff;
+  border: none;
+  background: #4a4a4a;
+  border-radius: 0.4rem;
+  padding: 0.5rem 2rem;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.filmsBlock a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.filmsBlock .container .filmsNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filmsBlock .container .filmsNav a {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+  margin: 0 1rem;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+.filmsBlock .container .filmsNav .active {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fb4226;
+}
+
+.filmsBlock .container .filmsNav .sapChieu:hover {
+  font-size: 1.5rem;
+}
+
+.filmsBlock .container .films-list .list-item {
+  margin: -2rem;
+}
+
+.filmsBlock .container .films-list .list-item .item {
+  margin-bottom: 2rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films-info {
+  position: relative;
+  height: 25rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films-info img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films-info .film-type-label {
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films-info .film-type-label img {
+  width: 10rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films-info .item-point {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-align: center;
+  width: 4rem;
+  height: 2.5rem;
+  background: rgba(55, 58, 49, 0.85);
+  border-radius: 0.2rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films-info .item-point p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: -0.7rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films-info .item-point i {
+  color: #fb4226;
+  font-size: 0.5rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films-info .sneakshow {
+  width: 9rem;
+  height: 2rem;
+  background: #fb4226;
+  border-radius: 0.7rem;
+  padding-top: 0.2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films-info .sneakshow p {
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films--detail {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(transparent));
+  background: linear-gradient(to top, #000000, transparent);
+  border-radius: 0.4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films--detail .play {
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .thumbnail-films .thumbnail-films--detail .play img {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .content-item {
+  padding: 1rem 0;
+  position: relative;
+  height: 7rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .content-item .content-item-info .tag {
+  display: inline-block;
+  width: 2.5rem;
+  height: 1.5rem;
+  background: #fb4226;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .content-item .content-item-info .tag p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .content-item .content-item-info .tag-P {
+  background: #00ac4d;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .content-item .content-item-info span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .content-item .content-item-info h6 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #a5a5a5;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .content-item .content-item-detail {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films .content-item .content-item-detail button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  background: #fb4226;
+  color: #ffffff;
+  width: 100%;
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  margin-top: 1rem;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films:hover .thumbnail-films--detail, .filmsBlock .container .films-list .list-item .item .item-films:hover .content-item-detail {
+  visibility: visible;
+}
+
+.filmsBlock .container .films-list .list-item .item .item-films:hover .content-item-info {
+  display: none;
+}
+
+.homeCinema .container {
+  border: 1px solid #ebebec;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item {
+  border-right: 1px solid #ebebec;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemalogo .logo {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ebebec;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemalogo .logo .nav-link {
+  padding: 0;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemalogo .logo img {
+  width: 100%;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinema-item-inner .tab-content .item {
+  margin-top: 1rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinema-item-inner .tab-content .item .content {
+  border-bottom: 1px solid #ebebec;
+  padding-bottom: 1rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinema-item-inner .tab-content .item .content img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinema-item-inner .tab-content .item .content .address {
+  margin-left: 1rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinema-item-inner .tab-content .item .content .address p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinema-item-inner .tab-content .item .content .address p b {
+  color: #8bc541;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinema-item-inner .tab-content .item .content .address h6 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #a5a5a5;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinema-item-inner .tab-content .item .content .address span {
+  color: #fb4226;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list {
+  height: 45rem;
+  overflow: auto;
+  margin-top: 1rem;
+  padding-right: 2rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item {
+  border-bottom: 1px solid #ebebec;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .films-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .films-item .image {
+  width: 4rem;
+  height: 4rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .films-item .image img {
+  width: 100%;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .films-item .content-info {
+  margin: 0 1rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .films-item .content-info .tagfilms {
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+  background: #fb4226;
+  color: #ffffff;
+  display: inline-block;
+  width: 2.5rem;
+  height: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .films-item .content-info .tagfilms-P {
+  background: #00ac4d;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .films-item .content-info span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .films-item .content-info h6 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #a5a5a5;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .digital {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .listbtn-time {
+  margin-top: 0.5rem;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .listbtn-time .itembtn-time a {
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  background: #fafafa;
+  color: #949494;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .listbtn-time .itembtn-time a span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #00ac4d;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item .cinemafilms__list .cinemafilms__item .content__films .listbtn-time .itembtn-time a span:hover {
+  color: #fb4226;
+}
+
+.homeCinema .container .homeCinemalist .cinema-item-last {
+  padding-right: 0;
+  border-right: none;
+}
+
+.newsblock a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.newsblock .container .newsblockNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+}
+
+.newsblock .container .newsblockNav a {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 1rem;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+.newsblock .container .newsblockNav .active {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fb4226;
+}
+
+.newsblock .container .newsblockNav .Rv-Km:hover {
+  font-size: 1.5rem;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card {
+  border: none;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card img {
+  border-radius: 0.4rem;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card .card-body {
+  padding: 0;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card .card-body .card-title {
+  height: 3.5rem;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card .card-body .card-title a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card .card-body .card-title a:hover {
+  color: #fb4226;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card .card-body .card-text {
+  height: 7rem;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card .card-body .card-text--2 {
+  height: 5rem;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card .card-body .newsblock-icon {
+  color: #ebebec;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card .card-body .newsblock-icon .iconlikecmt {
+  margin: 0 0.5rem;
+  color: #ebebec;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card .card-body .newsblock-icon .iconlikecmt:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card .card-body .newsblock-icon .iconlikecmt span {
+  margin-right: 2rem;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card--child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card--child img {
+  height: 4rem;
+  margin-right: 1rem;
+  border-radius: 0.3rem;
+}
+
+.newsblock .container .newsblock__content .newsblock__content-list .newsblock__content-item .newsblock-card--child a:hover {
+  color: #fb4226;
+}
+
+.newsblock .container .newsblock__content .btn-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  margin: 5rem 0;
+}
+
+.newsblock .container .newsblock__content .btn-more button {
+  border: 1px solid #949494;
+  border-radius: 0.3rem;
+  outline: none;
+  background: transparent;
+  color: #949494;
+  padding: 0.3rem 1rem;
+}
+
+.newsblock .container .newsblock__content .btn-more button:hover {
+  border: 1px solid #fb4226;
+  border-radius: 0.3rem;
+  outline: none;
+  background: #fb4226;
+  color: #ffffff;
+}
+
+.appCinema .appCinema__background {
+  height: 40rem;
+  background: url(../../img/backapp.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.appCinema .appCinema__background .container {
+  display: flx;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 40rem;
+}
+
+.appCinema .appCinema__background .appCinema__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__download {
+  width: 50%;
+  position: relative;
+  bottom: 50%;
+  padding: 0 2rem;
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__download h1 {
+  line-height: 4rem;
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__download p {
+  word-spacing: 0.1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__download button {
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+  background: #fb4226;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__download span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
+  display: block;
+  margin-top: 1rem;
+  word-spacing: 0.2rem;
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__download span a {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  position: relative;
+  bottom: 50%;
+  position: relative;
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__mobile .appCinema__mobile-img {
+  width: calc(100% / 3);
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__mobile .appCinema__mobile-img img {
+  width: 100%;
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__mobile .appCinema__mobile--slide {
+  padding: 0.5rem 0.4rem 0.4rem 0.4rem;
+  width: calc(100% / 3);
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.appCinema .appCinema__background .appCinema__content .appCinema__mobile .appCinema__mobile--slide img {
+  border-radius: 1rem;
+}
+
+.footer {
+  background: #222222;
+}
+
+.footer a {
+  display: block;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #949494;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.footer .container .footer-top {
+  color: #ffffff;
+  padding-top: 2rem;
+}
+
+.footer .container .footer-top .footer-top-partner p {
+  padding: 0 1rem;
+}
+
+.footer .container .footer-top .footer-top-partner a {
+  background: #ffffff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50rem;
+  margin: 0 0.7rem 1.4rem 0.7rem;
+}
+
+.footer .container .footer-top .footer-top-partner a img {
+  border-radius: 50rem;
+  width: 100%;
+}
+
+.footer .container .footer-top .footer-top-appsocial {
+  text-align: center;
+}
+
+.footer .container .footer-top .footer-top-appsocial a {
+  display: inline;
+  margin: 0 1rem;
+}
+
+.footer .container .footer-top .footer-top-appsocial a img {
+  height: 2.5rem;
+}
+
+.footer .container hr {
+  border-top: 1px solid #4a4a4a;
+}
+
+.footer .container .footer-bottom {
+  color: #ffffff;
+}
+
+.footer .container .footer-bottom img {
+  width: 80%;
+  border-radius: 0.5rem;
+}
+
+.footer .container .footer-bottom h2 {
+  font-size: 1rem;
+}
+
+.footer .container .footer-bottom p {
+  font-size: 0.9rem;
+  font-weight: none;
+  color: #949494;
+  margin: 0;
+  padding-right: 3rem;
+}
+
+.footer .container .footer-bottom a {
+  display: inline;
+  color: #fb4226;
+}
+/*# sourceMappingURL=index_tix.css.map */

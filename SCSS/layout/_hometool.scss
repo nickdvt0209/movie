@@ -1,0 +1,34 @@
+.hometool{
+    .container{
+        position: absolute;
+        top: $spacing*37;
+        left: 7.5%;
+        .nav-list{
+            background:$whiteBg;
+            @include Flex(flex, space-between, center);
+            list-style-type: none;
+            padding: $spacing;
+            border-radius: $rounded-md;
+            box-shadow: 0 0 5px 5px rgba(14, 14, 14, 0.3); ;
+            .dropdown-toggle::after{
+                margin-left: $spacing*7.65;
+            }
+            .nav-item{
+                a{
+                    color: $blackTx;
+                    text-decoration: none;
+                    border-right: 1px solid $gray-300Bd;
+                }
+                .nav-last{
+                    color:$whiteTx;
+                    border: none;
+                    background: $gray-600Bg;
+                    border-radius: $rounded-sm;
+                    padding: $spacing*0.5 $spacing*2;
+                    margin-right: $spacing*0.5;
+                    font-weight: $text-regular;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.newsblock{
+    a{
+        text-decoration: none;
+        color: $blackTx;
+    }
+    .container{
+        .newsblockNav{
+            @include Flex(flex, center, center);
+            margin-top: $spacing*7;
+            margin-bottom: $spacing;
+            a{
+                @include Text($text-lg, $text-regular, $blackTx);
+                margin: 0 $spacing;
+                transition: all 0.15s linear;
+            }
+            .active{
+                @include Text($text-2lg, $text-regular, $primaryTx);
+            }
+            .Rv-Km:hover{
+                font-size: $text-2lg;
+            }
+        }
+
+        .newsblock__content{
+            .newsblock__content-list{
+                .newsblock__content-item{
+                    .newsblock-card{
+                        border: none;
+                        img{
+                            border-radius: $rounded-sm;
+                        }
+                        .card-body{
+                            padding: 0;
+                            margin: $spacing 0;
+                            text-align: left;
+                            .card-title{
+                                height: 3.5*$spacing;
+                                a{
+                                    @include Text($text-2md, $text-regular, $blackTx);
+                                    &:hover{
+                                        color: $primaryTx;
+                                    }
+                                }
+                            }
+                            .card-text{
+                                height: 7*$spacing;
+                            }
+                            .card-text--2{
+                                height: 5*$spacing;
+                            }
+                        
+                            .newsblock-icon{
+                                color: $gray-300Tx;
+
+                                .iconlikecmt{
+                                    margin: 0 $spacing*0.5;
+                                    color: $gray-300Tx;
+                                    &:hover{
+                                        transform: scale(1.2);
+                                    }
+                                
+                                    span{
+                                        margin-right: $spacing*2; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .newsblock-card--child{
+                        @include Flex(flex, none, center);
+                        margin-bottom: $spacing;
+                        img{
+                            height: 4*$spacing;
+                            margin-right: $spacing;
+                            border-radius: $rounded-2xs;
+                        }
+                        a:hover{
+                            color: $primaryTx;
+                        }
+                    }
+                }
+            }
+
+            .btn-more{
+                @include Flex(flex, center, none);
+                margin: $spacing*5 0;
+
+                button{
+                    @include Button(1px solid $gray-500Bd, $rounded-2xs, none, transparent, $gray-500Tx);
+                    padding: $spacing*0.3 $spacing;
+                    &:hover{
+                        @include Button(1px solid $primaryBg, $rounded-2xs, none, $primaryBg, $whiteTx);
+                    }
+                }
+            }
+        }
+    }
+}
